@@ -102,7 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                         Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                           return Onboarding_2();}
-                        )
+                          )
                         );
                       },
                           style: ButtonStyle(

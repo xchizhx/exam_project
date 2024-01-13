@@ -29,7 +29,7 @@ class Onboarding_3 extends StatelessWidget{
                 )
             ),
             Padding(
-                padding: EdgeInsets.only(left: 55, right: 54, top: 4),
+                padding: EdgeInsets.only(left: 39, right: 40, top: 4),
                 child: Text("Track your packages/items from the comfort of your home till final destination",
                   style: TextStyle(
                     fontSize: 14
