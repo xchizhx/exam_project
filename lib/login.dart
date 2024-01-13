@@ -1,3 +1,4 @@
+import 'package:exam_project_2/sing_up.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -38,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             const Padding(
               padding: EdgeInsets.only(top: 33, left: 19),
@@ -65,9 +66,15 @@ class _MyHomePageState extends State<MyHomePage> {
                     style: TextStyle(color: Color.fromARGB(255, 167, 167, 167))),
               ),
             ),
-            Container(
-              child: Text("",
-                 ),
+            Padding(
+              padding: EdgeInsets.only(top: 8, left: 19),
+              child: Container(
+                child: Padding(
+                  padding: EdgeInsets.only(top: 14, left: 10, bottom: 14),
+                  child: Text("***********@mail.com",
+                     ),
+                ),
+              ),
             ),
             Padding(
               padding: EdgeInsets.only(left: 19, top: 33),
@@ -77,8 +84,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     style: TextStyle(color: Color.fromARGB(255, 167, 167, 167))),
               ),
             ),
-            Container(
-              child: Text(""),
+            Padding(
+              padding: EdgeInsets.only(left: 19, top: 8),
+              child: Container(
+                child: Padding(
+                    padding: EdgeInsets.only(left: 10, top: 14, bottom: 14),
+                    child: Text("**********")),
+              ),
             ),
             Padding(
               padding: EdgeInsets.only(top: 24, left: 24, right: 24),
@@ -100,23 +112,38 @@ class _MyHomePageState extends State<MyHomePage> {
 
             Expanded(
               child: Padding(
-                padding: EdgeInsets.only(top: 285),
+                padding: EdgeInsets.only(top: 325,left: 19, right: 19),
                 child: OutlinedButton(onPressed: (){
                 },
-                  child: Text("Login")),
+                    style: ButtonStyle(
+                        shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(1))),
+                        backgroundColor: MaterialStateColor.resolveWith((states)
+                        => Color.fromARGB(255, 5, 96, 250))),
+                  child: Text("Login", style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),)),
               ),
             ),
             Align(
             alignment: Alignment.center,
-            child: RichText(text: TextSpan(
-              children: [
-                TextSpan(text: "Sign Up",
-                    style: TextStyle(color: Color.fromARGB(255, 167, 167, 167))),
-                TextSpan(text: "Not have account?",
-                    style: TextStyle(color: Color.fromARGB(255, 5, 96, 250)))
-                  ]
-                )
+            child: Padding(
+              padding: EdgeInsets.only(top: 20, bottom: 24),
+              child: GestureDetector( 
+                onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                  return Sign_up();
+                }));
+              },
+                child: RichText(text: TextSpan(
+                  children: [
+                    TextSpan(text: "Not have account?",
+                        style: TextStyle(color: Color.fromARGB(255, 5, 96, 250))),
+                    TextSpan(text: "Sign Up",
+                        style: TextStyle(color: Color.fromARGB(255, 167, 167, 167)))
+                      ]
+                    )
+                  ),
               ),
+            ),
             )
           ],
         ),
