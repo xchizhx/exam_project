@@ -76,21 +76,34 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Row(
                 children: [
                   Expanded(
-                    child: OutlinedButton(onPressed: (){
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context){
-                        return Holder();
-                      }));
-                    }, child: Text("Skip")),
+                    child: Padding(
+                      padding: EdgeInsets.only(right: 75, left: 25),
+                      child: OutlinedButton(onPressed: (){
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                          return Holder();
+                        }));
+                      },
+                          style: ButtonStyle(
+                              shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(1)))),
+                          child: Text("Skip")),
+                    ),
                   ),
                   Expanded(
-                    child: OutlinedButton(onPressed: (){
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 75, right: 25),
+                      child: OutlinedButton(onPressed: (){
 
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                        return Onboarding_2();}
-                      )
-                      );
-                    },
-                        child: Text("Next")),
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                          return Onboarding_2();}
+                        )
+                        );
+                      },
+                          style: ButtonStyle(
+                              shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(1)))),
+                          child: Text("Next")),
+                    ),
                   )
                 ],
               ),

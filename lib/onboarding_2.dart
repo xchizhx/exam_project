@@ -33,25 +33,42 @@ class Onboarding_2 extends StatelessWidget{
             Padding(
                 padding: EdgeInsets.only(left: 55, right: 54),
                 child: Text("Different modes of payment either before and after delivery without stress")),
-            Row(
-              children: [
-                OutlinedButton(onPressed: (){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context){
-                    return Holder();
-                  }));
-                }, child: Text("Skip")),
-                Align(
-                  alignment: Alignment.bottomRight,
-                  child: OutlinedButton(onPressed: (){
+            Padding(
+              padding: EdgeInsets.only(top: 130, left: 24, right: 24),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.only(right: 75, left: 25),
+                      child: OutlinedButton(onPressed: (){
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                          return Holder();
+                        }));
+                      },
+                          style: ButtonStyle(
+                              shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(1)))),
+                          child: Text("Skip")),
+                    ),
+                  ),
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 75, right: 25),
+                      child: OutlinedButton(onPressed: (){
 
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                      return Onboarding_3();}
-                    )
-                    );
-                  },
-                      child: Text("Next")),
-                )
-              ],
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                          return Onboarding_3();}
+                        )
+                        );
+                      },
+                          style: ButtonStyle(
+                              shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(1)))),
+                          child: Text("Next")),
+                    ),
+                  )
+                ],
+              ),
             )
           ],
         ),

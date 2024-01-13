@@ -29,15 +29,24 @@ class Onboarding_3 extends StatelessWidget{
                 )
             ),
             Padding(
-                padding: EdgeInsets.only(left: 55, right: 54),
+                padding: EdgeInsets.only(left: 55, right: 54, top: 4),
                 child: Text("Track your packages/items from the comfort of your home till final destination")),
             Row(
               children: [
-                OutlinedButton(onPressed: (){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context){
-                    return Holder();
-                  }));
-                }, child: Text("Sign In")),
+                Expanded(
+                  child: Padding(
+                    padding: EdgeInsets.only(top: 154, left: 24, right: 24),
+                    child: OutlinedButton(onPressed: (){
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                        return Holder();
+                      }));
+                    },
+                        style: ButtonStyle(
+                            shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(1)))),
+                        child: Text("Sign In")),
+                  ),
+                ),
               ],
             )
           ],
