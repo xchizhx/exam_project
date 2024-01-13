@@ -32,7 +32,10 @@ class Onboarding_2 extends StatelessWidget{
             ),
             Padding(
                 padding: EdgeInsets.only(left: 55, right: 54),
-                child: Text("Different modes of payment either before and after delivery without stress")),
+                child: Text("Different modes of payment either before and after delivery without stress",
+                  style: TextStyle(
+                      fontSize: 14
+                  ),)),
             Padding(
               padding: EdgeInsets.only(top: 130, left: 24, right: 24),
               child: Row(
@@ -48,7 +51,10 @@ class Onboarding_2 extends StatelessWidget{
                           style: ButtonStyle(
                               shape: MaterialStateProperty.all(RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(1)))),
-                          child: Text("Skip")),
+                          child: Text("Skip",
+                            style: TextStyle(
+                                fontSize: 14
+                            ),)),
                     ),
                   ),
                   Expanded(
@@ -64,7 +70,10 @@ class Onboarding_2 extends StatelessWidget{
                           style: ButtonStyle(
                               shape: MaterialStateProperty.all(RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(1)))),
-                          child: Text("Next")),
+                          child: Text("Next",
+                            style: TextStyle(
+                                fontSize: 14
+                            ),)),
                     ),
                   )
                 ],

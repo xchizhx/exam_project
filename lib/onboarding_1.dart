@@ -70,7 +70,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Padding(
                 padding: EdgeInsets.only(left: 55, right: 54),
-                child: Text("Enjoy quick pick-up and delivery to your destination")),
+                child: Text("Enjoy quick pick-up and delivery to your destination",
+                  style: TextStyle(
+                      fontSize: 14
+                  ),)),
             Padding(
               padding: EdgeInsets.only(top: 130, left: 24, right: 24),
               child: Row(
@@ -86,7 +89,10 @@ class _MyHomePageState extends State<MyHomePage> {
                           style: ButtonStyle(
                               shape: MaterialStateProperty.all(RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(1)))),
-                          child: Text("Skip")),
+                          child: Text("Skip",
+                            style: TextStyle(
+                                fontSize: 14
+                            ),)),
                     ),
                   ),
                   Expanded(
@@ -102,7 +108,10 @@ class _MyHomePageState extends State<MyHomePage> {
                           style: ButtonStyle(
                               shape: MaterialStateProperty.all(RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(1)))),
-                          child: Text("Next")),
+                          child: Text("Next",
+                            style: TextStyle(
+                                fontSize: 14
+                            ),)),
                     ),
                   )
                 ],
