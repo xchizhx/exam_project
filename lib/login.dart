@@ -58,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     style: TextStyle(color: Color.fromARGB(255, 167, 167, 167))),
               ),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(left: 19, top: 33),
               child: Align(
                 alignment: Alignment.centerLeft,
@@ -71,8 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Container(
                 child: Padding(
                   padding: EdgeInsets.only(top: 14, left: 10, bottom: 14),
-                  child: Text("***********@mail.com",
-                     ),
+                  child: Text("***********@mail.com"),
                 ),
               ),
             ),

@@ -11,6 +11,5 @@ class Wallet extends StatelessWidget{
         ),
       ),
     );
-    throw UnimplementedError();
   }
 }

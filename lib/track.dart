@@ -8,7 +8,6 @@ class Track extends StatelessWidget{
       body: Center(
         child: Column(),),
     );
-    throw UnimplementedError();
   }
 
 }

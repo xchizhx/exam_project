@@ -9,7 +9,6 @@ class Home extends StatelessWidget{
         child: Column(),
       ),
     );
-    throw UnimplementedError();
   }
 
 }
