@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:exam_project/holder.dart';
 import 'package:exam_project/onboarding_2.dart';
 import 'package:flutter/material.dart';
@@ -35,13 +33,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
