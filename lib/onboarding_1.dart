@@ -76,7 +76,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: OutlinedButton(onPressed: (){
                         Navigator.of(context).push(MaterialPageRoute(builder: (context){
                           return Holder();
-                        }));
+                        })
+                        );
                       },
                           style: ButtonStyle(
                               shape: MaterialStateProperty.all(RoundedRectangleBorder(
@@ -84,7 +85,9 @@ class _MyHomePageState extends State<MyHomePage> {
                           child: Text("Skip",
                             style: TextStyle(
                                 fontSize: 14
-                            ),)),
+                            ),
+                          )
+                      ),
                     ),
                   ),
                   Expanded(
@@ -99,7 +102,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       },
                           style: ButtonStyle(
                               shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(1)))),
+                                  borderRadius: BorderRadius.circular(1)
+                              )
+                            )
+                          ),
                           child: Text("Next",
                             style: TextStyle(
                                 fontSize: 14
