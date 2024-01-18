@@ -21,6 +21,7 @@ class Onboarding_2 extends StatelessWidget{
                   alignment: Alignment.center,
                   child: Container(
                     child: Text("Flexible Payment",
+                        textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Color.fromARGB(255, 5, 96, 250),
                           fontSize: 24,
@@ -33,6 +34,7 @@ class Onboarding_2 extends StatelessWidget{
             Padding(
                 padding: EdgeInsets.only(left: 55, right: 54),
                 child: Text("Different modes of payment either before and after delivery without stress",
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                       fontSize: 14
                   ),)),
@@ -50,10 +52,13 @@ class Onboarding_2 extends StatelessWidget{
                       },
                           style: ButtonStyle(
                               shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(1)))),
+                                  borderRadius: BorderRadius.circular(1))),
+                              side: MaterialStateProperty.resolveWith((states)
+                              => BorderSide(width: 1, color: Color.fromARGB(255, 5, 96, 250)))),
                           child: Text("Skip",
                             style: TextStyle(
-                                fontSize: 14
+                                fontSize: 14,
+                              color: Color.fromARGB(255, 5, 96, 250)
                             ),)),
                     ),
                   ),
@@ -69,10 +74,14 @@ class Onboarding_2 extends StatelessWidget{
                       },
                           style: ButtonStyle(
                               shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(1)))),
+                                  borderRadius: BorderRadius.circular(1))),
+                          backgroundColor: MaterialStateColor.resolveWith((states)
+                          => Color.fromARGB(255, 5, 96, 250))),
+
                           child: Text("Next",
                             style: TextStyle(
-                                fontSize: 14
+                                fontSize: 14,
+                              color: Color.fromARGB(255, 255, 255, 255)
                             ),)),
                     ),
                   )

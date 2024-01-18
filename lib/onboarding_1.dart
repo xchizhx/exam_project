@@ -51,10 +51,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 alignment: Alignment.center,
                 child: Container(
                   child: Text("Quick Delivery At Your Doorstep",
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Color.fromARGB(255, 5, 96, 250),
                       fontSize: 24,
-
                     )
                   ),
                 ),
@@ -63,6 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Padding(
                 padding: EdgeInsets.only(left: 55, right: 54),
                 child: Text("Enjoy quick pick-up and delivery to your destination",
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                       fontSize: 14
                   ),)),
@@ -80,11 +81,15 @@ class _MyHomePageState extends State<MyHomePage> {
                         );
                       },
                           style: ButtonStyle(
-                              shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(1)))),
+                            shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(1))),
+                            side: MaterialStateProperty.resolveWith((states)
+                            => BorderSide(width: 1, color: Color.fromARGB(255, 5, 96, 250)))
+                          ),
                           child: Text("Skip",
                             style: TextStyle(
-                                fontSize: 14
+                                fontSize: 14,
+                              color: Color.fromARGB(255, 5, 96, 250)
                             ),
                           )
                       ),
@@ -102,13 +107,14 @@ class _MyHomePageState extends State<MyHomePage> {
                       },
                           style: ButtonStyle(
                               shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(1)
-                              )
-                            )
+                                  borderRadius: BorderRadius.circular(1))),
+                              backgroundColor: MaterialStateColor.resolveWith((states)
+                              => Color.fromARGB(255, 5, 96, 250))
                           ),
                           child: Text("Next",
                             style: TextStyle(
-                                fontSize: 14
+                                fontSize: 14,
+                              color: Color.fromARGB(255, 255, 255, 255)
                             ),)),
                     ),
                   )
