@@ -1,16 +1,35 @@
+import 'package:exam_project_2/login.dart';
 import 'package:exam_project_2/profile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Sign_up extends StatelessWidget{
+
+  bool isChecked = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Column(
-          children: [
-            Text("Create an account"),
-            Text("Complete the sign up process to get started"),
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+            const Padding(
+              padding: EdgeInsets.only(top: 33, left: 19),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text("Create an account",
+                    style: TextStyle(color: Color.fromARGB(255, 58, 58, 58),
+                        fontSize: 24)),
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(top: 8, left: 19),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text("Complete the sign up process to get started",
+                    style: TextStyle(color: Color.fromARGB(255, 167, 167, 167))),
+              ),
+            ),
             Padding(
               padding: EdgeInsets.only(left: 19, top: 33),
               child: Align(
@@ -91,14 +110,21 @@ class Sign_up extends StatelessWidget{
                     child: Text("**********")),
               ),
             ),
-            OutlinedButton(onPressed: (){
-              Navigator.of(context).push(MaterialPageRoute(builder: (context){
-                return Profile();
-              }));
-            }, child: Text("To Profile"))
-          ],
-        ),
-      ),
+            Padding(
+              padding: EdgeInsets.only(top: 24, left: 24, right: 24),
+              child: Row(
+                children: [
+                  OutlinedButton(onPressed: (){
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                      return Profile();
+                    }));
+                  }, child: Text("Sign Up"))
+                ],
+              ),
+            ),
+          ]
+        )
+      )
     );
   }
 }

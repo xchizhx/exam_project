@@ -86,6 +86,8 @@ class _MyHomePageState extends State<MyHomePage> {
             Padding(
               padding: EdgeInsets.only(left: 19, top: 8),
               child: Container(
+                decoration: BoxDecoration(border: Border.all(
+                    color: Color.fromARGB(255, 1, 1, 1), width: 1)),
                 child: Padding(
                     padding: EdgeInsets.only(left: 10, top: 14, bottom: 14),
                     child: Text("**********")),
