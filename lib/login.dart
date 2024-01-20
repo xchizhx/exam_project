@@ -67,11 +67,15 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 8, left: 19),
+              padding: EdgeInsets.only(top: 8, left: 19, right: 19),
               child: Container(
+                decoration: BoxDecoration(border: Border.all(
+                  color: Color.fromARGB(255, 167, 167, 167), width: 1)
+              ),
                 child: Padding(
                   padding: EdgeInsets.only(top: 14, left: 10, bottom: 14),
-                  child: Text("***********@mail.com"),
+                  child: Text("***********@mail.com",
+                    style: TextStyle(color: Color.fromARGB(255, 167, 167, 167)),),
                 ),
               ),
             ),
@@ -84,13 +88,15 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 19, top: 8),
+              padding: EdgeInsets.only(left: 19, top: 8, right: 19),
               child: Container(
                 decoration: BoxDecoration(border: Border.all(
-                    color: Color.fromARGB(255, 1, 1, 1), width: 1)),
+                    color: Color.fromARGB(255, 167, 167, 167), width: 1)
+                ),
                 child: Padding(
                     padding: EdgeInsets.only(left: 10, top: 14, bottom: 14),
-                    child: Text("**********")),
+                    child: Text("**********",
+                      style: TextStyle(color: Color.fromARGB(255, 167, 167, 167)),)),
               ),
             ),
             Padding(
@@ -104,9 +110,11 @@ class _MyHomePageState extends State<MyHomePage> {
                         });
                   }),
                   Text("Remember password",
-                    style: TextStyle(color: Color.fromARGB(255, 167, 167, 167))),
+                    style: TextStyle(color: Color.fromARGB(255, 167, 167, 167),
+                    fontSize: 12)),
                   Text("Forgot Password?",
-                    style: TextStyle(color: Color.fromARGB(255, 167, 167, 167)))
+                    style: TextStyle(color: Color.fromARGB(255, 5, 96, 250),
+                    fontSize: 12))
                 ],
               ),
             ),
@@ -121,7 +129,11 @@ class _MyHomePageState extends State<MyHomePage> {
                             borderRadius: BorderRadius.circular(1))),
                         backgroundColor: MaterialStateColor.resolveWith((states)
                         => Color.fromARGB(255, 5, 96, 250))),
-                  child: Text("Login", style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),)),
+                  child: Text("Login",
+                    style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),
+                    fontSize: 16),
+                  )
+                ),
               ),
             ),
             Align(
@@ -137,9 +149,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: RichText(text: TextSpan(
                   children: [
                     TextSpan(text: "Not have account?",
-                        style: TextStyle(color: Color.fromARGB(255, 5, 96, 250))),
+                        style: TextStyle(color: Color.fromARGB(255, 167, 167, 167))),
                     TextSpan(text: "Sign Up",
-                        style: TextStyle(color: Color.fromARGB(255, 167, 167, 167)))
+                        style: TextStyle(color: Color.fromARGB(255, 5, 96, 250)))
                       ]
                     )
                   ),

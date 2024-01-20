@@ -1,11 +1,19 @@
-import 'package:exam_project_2/login.dart';
 import 'package:exam_project_2/profile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Sign_up extends StatelessWidget{
+class Sign_up extends StatefulWidget{
 
+
+  Sign_up({super.key});
+
+  @override
+  State<Sign_up> createState() => _Sign_upState();
+}
+
+class _Sign_upState extends State<Sign_up> {
   bool isChecked = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,11 +47,15 @@ class Sign_up extends StatelessWidget{
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 19, top: 8),
+              padding: EdgeInsets.only(left: 19, top: 8, right: 19),
               child: Container(
+                decoration: BoxDecoration(border: Border.all(
+                    color: Color.fromARGB(255, 167, 167, 167), width: 1)
+                ),
                 child: Padding(
                     padding: EdgeInsets.only(left: 10, top: 14, bottom: 14),
-                    child: Text("Ivanov Ivan")),
+                    child: Text("Ivanov Ivan",
+                    style: TextStyle(color: Color.fromARGB(255, 167, 167, 167)),)),
               ),
             ),
             Padding(
@@ -55,11 +67,35 @@ class Sign_up extends StatelessWidget{
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 19, top: 8),
+              padding: EdgeInsets.only(left: 19, top: 8, right: 19),
               child: Container(
+                decoration: BoxDecoration(border: Border.all(
+                    color: Color.fromARGB(255, 167, 167, 167), width: 1)
+                ),
                 child: Padding(
                     padding: EdgeInsets.only(left: 10, top: 14, bottom: 14),
-                    child: Text("**********")),
+                    child: Text("+7(999)999-99-99",
+                      style: TextStyle(color: Color.fromARGB(255, 167, 167, 167)),)),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 19, top: 33),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text("Email Address",
+                    style: TextStyle(color: Color.fromARGB(255, 167, 167, 167))),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 19, top: 8, right: 19),
+              child: Container(
+                decoration: BoxDecoration(border: Border.all(
+                    color: Color.fromARGB(255, 167, 167, 167), width: 1)
+                ),
+                child: Padding(
+                    padding: EdgeInsets.only(left: 10, top: 14, bottom: 14),
+                    child: Text("**********@gmail.com",
+                    style: TextStyle(color: Color.fromARGB(255, 167, 167, 167)),)),
               ),
             ),
             Padding(
@@ -71,57 +107,103 @@ class Sign_up extends StatelessWidget{
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 19, top: 8),
+              padding: EdgeInsets.only(left: 19, top: 8, right: 19),
               child: Container(
+                decoration: BoxDecoration(border: Border.all(
+                    color: Color.fromARGB(255, 167, 167, 167), width: 1)
+                ),
                 child: Padding(
                     padding: EdgeInsets.only(left: 10, top: 14, bottom: 14),
-                    child: Text("**********")),
+                    child: Text("**********",
+                      style: TextStyle(color: Color.fromARGB(255, 167, 167, 167)),)),
               ),
             ),
             Padding(
               padding: EdgeInsets.only(left: 19, top: 33),
               child: Align(
                 alignment: Alignment.centerLeft,
-                child: Text("Password",
+                child: Text("Confirm Password",
                     style: TextStyle(color: Color.fromARGB(255, 167, 167, 167))),
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 19, top: 8),
+              padding: EdgeInsets.only(left: 19, top: 8, right: 19),
               child: Container(
+                decoration: BoxDecoration(border: Border.all(
+                    color: Color.fromARGB(255, 167, 167, 167), width: 1)
+                ),
                 child: Padding(
                     padding: EdgeInsets.only(left: 10, top: 14, bottom: 14),
-                    child: Text("**********")),
+                    child: Text("**********",
+                      style: TextStyle(color: Color.fromARGB(255, 167, 167, 167)),)),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.only(left: 19, top: 33),
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: Text("Password",
-                    style: TextStyle(color: Color.fromARGB(255, 167, 167, 167))),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 19, top: 8),
-              child: Container(
-                child: Padding(
-                    padding: EdgeInsets.only(left: 10, top: 14, bottom: 14),
-                    child: Text("**********")),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(top: 24, left: 24, right: 24),
+
+            Expanded(
               child: Row(
-                children: [
-                  OutlinedButton(onPressed: (){
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context){
-                      return Profile();
-                    }));
-                  }, child: Text("Sign Up"))
-                ],
-              ),
+                children: [Padding(
+                  padding: EdgeInsets.only(left: 24, right: 14),
+                    child: Checkbox(
+                        value: isChecked, onChanged: (bool? value){
+                      setState(() {
+                        isChecked = value!;
+                      });
+                    }),
+                  ),
+                  RichText(text: TextSpan(
+                      children: [
+                        TextSpan(text: "By ticking this box, you agree to our",
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 167, 167, 167),
+                            fontSize: 12)),
+                        TextSpan(text: "Terms and conditions\nand private policy",
+                            style: TextStyle(
+                              color: Color.fromARGB(255, 235, 188, 46),
+                            fontSize: 12))
+                      ]
+                  )
+                  ),
+              ]),
             ),
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.only(top: 8, left: 19, right: 19),
+                  child: OutlinedButton(onPressed: (){
+                  },
+                      style: ButtonStyle(
+                          shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(1))),
+                          backgroundColor: MaterialStateColor.resolveWith((states)
+                          => Color.fromARGB(255, 5, 96, 250))),
+                      child: Text("Sign Up",
+                        style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),
+                            fontSize: 16),
+                      )
+                  ),
+                ),
+              ),
+              Align(
+                alignment: Alignment.center,
+                child: Padding(
+                  padding: EdgeInsets.only(top: 20, bottom: 24),
+                  child: GestureDetector(
+                    onTap: (){
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                        return Sign_up();
+                      }));
+                    },
+                    child: RichText(text: TextSpan(
+                        children: [
+                          TextSpan(text: "Not have account?",
+                              style: TextStyle(color: Color.fromARGB(255, 167, 167, 167))),
+                          TextSpan(text: "Sign Up",
+                              style: TextStyle(color: Color.fromARGB(255, 5, 96, 250)))
+                        ]
+                    )
+                    ),
+                  ),
+                ),
+              )
           ]
         )
       )
