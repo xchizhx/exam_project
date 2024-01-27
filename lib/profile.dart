@@ -1,6 +1,3 @@
-import 'package:exam_project_2/home.dart';
-import 'package:exam_project_2/track.dart';
-import 'package:exam_project_2/wallet.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

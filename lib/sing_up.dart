@@ -1,5 +1,3 @@
-import 'package:exam_project_2/login.dart';
-import 'package:exam_project_2/profile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
