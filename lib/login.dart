@@ -1,3 +1,4 @@
+import 'package:exam_project_2/home.dart';
 import 'package:exam_project_2/sing_up.dart';
 import 'package:flutter/material.dart';
 
@@ -67,19 +68,20 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 8, left: 19, right: 19),
+              padding: const EdgeInsets.only(top: 8, left: 19, right: 19),
               child: Container(
                 decoration: BoxDecoration(border: Border.all(
-                  color: Color.fromARGB(255, 167, 167, 167), width: 1)
+                  color: const Color.fromARGB(255, 167, 167, 167), width: 1),
+                    borderRadius: BorderRadius.circular(4)
               ),
-                child: Padding(
+                child: const Padding(
                   padding: EdgeInsets.only(top: 14, left: 10, bottom: 14),
                   child: Text("***********@mail.com",
                     style: TextStyle(color: Color.fromARGB(255, 167, 167, 167)),),
                 ),
               ),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(left: 19, top: 33),
               child: Align(
                 alignment: Alignment.centerLeft,
@@ -88,48 +90,70 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 19, top: 8, right: 19),
+              padding: const EdgeInsets.only(left: 19, top: 8, right: 19),
               child: Container(
                 decoration: BoxDecoration(border: Border.all(
-                    color: Color.fromARGB(255, 167, 167, 167), width: 1)
+                    color: const Color.fromARGB(255, 167, 167, 167), width: 1),
+                    borderRadius: BorderRadius.circular(4)
                 ),
-                child: Padding(
+                child: const Padding(
                     padding: EdgeInsets.only(left: 10, top: 14, bottom: 14),
                     child: Text("**********",
                       style: TextStyle(color: Color.fromARGB(255, 167, 167, 167)),)),
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 24, left: 24, right: 24),
+              padding: const EdgeInsets.only(top: 20, left: 24, right: 24),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Checkbox(
-                      value: isChecked, onChanged: (bool? value){
-                        setState(() {
-                          isChecked = value!;
-                        });
-                  }),
-                  Text("Remember password",
-                    style: TextStyle(color: Color.fromARGB(255, 167, 167, 167),
-                    fontSize: 12)),
-                  Text("Forgot Password?",
-                    style: TextStyle(color: Color.fromARGB(255, 5, 96, 250),
-                    fontSize: 12))
-                ],
-              ),
+                  Row(
+                  children: [
+                    Checkbox(
+                      side: const BorderSide(
+                        width: 1,
+                        color: Color.fromARGB(255, 167, 167, 167)
+                      ),
+                        value: isChecked, onChanged: (bool? value){
+                          setState(() {
+                            isChecked = value!;
+                          });
+                    }),
+                    const Text("Remember password",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Color.fromARGB(255, 167, 167, 167),
+                      fontSize: 12, fontWeight: FontWeight.w500)),
+                    Column(
+                      children: [
+                        TextButton(onPressed: (){},
+                          child: const Text("Forgot Password?",
+                        textAlign: TextAlign.right,
+                        style: TextStyle(color: Color.fromARGB(255, 5, 96, 250),
+                        fontSize: 12)
+                        ),
+                        )
+                      ]
+                    )
+                  ],
+                ),
+              ]),
             ),
 
             Expanded(
               child: Padding(
-                padding: EdgeInsets.only(top: 325,left: 19, right: 19),
+                padding: const EdgeInsets.only(top: 325,left: 19, right: 19),
                 child: OutlinedButton(onPressed: (){
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context){
+                        return Home();
+                      }));
                 },
                     style: ButtonStyle(
                         shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(1))),
+                            borderRadius: BorderRadius.circular(4))),
                         backgroundColor: MaterialStateColor.resolveWith((states)
-                        => Color.fromARGB(255, 5, 96, 250))),
-                  child: Text("Login",
+                        => const Color.fromARGB(255, 5, 96, 250))),
+                  child: const Text("Login",
                     style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),
                     fontSize: 16),
                   )
@@ -139,14 +163,15 @@ class _MyHomePageState extends State<MyHomePage> {
             Align(
             alignment: Alignment.center,
             child: Padding(
-              padding: EdgeInsets.only(top: 20, bottom: 24),
-              child: GestureDetector( 
+              padding: const EdgeInsets.only(top: 20, bottom: 24),
+              child: GestureDetector(
                 onTap: (){
-                Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                Navigator.of(context).push(MaterialPageRoute
+                  (builder: (context){
                   return Sign_up();
                 }));
               },
-                child: RichText(text: TextSpan(
+                child: RichText(text: const TextSpan(
                   children: [
                     TextSpan(text: "Not have account?",
                         style: TextStyle(color: Color.fromARGB(255, 167, 167, 167))),

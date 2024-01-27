@@ -1,3 +1,4 @@
+import 'package:exam_project_2/login.dart';
 import 'package:exam_project_2/profile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -38,7 +39,7 @@ class _Sign_upState extends State<Sign_up> {
                     style: TextStyle(color: Color.fromARGB(255, 167, 167, 167))),
               ),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(left: 19, top: 33),
               child: Align(
                 alignment: Alignment.centerLeft,
@@ -47,18 +48,19 @@ class _Sign_upState extends State<Sign_up> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 19, top: 8, right: 19),
+              padding: const EdgeInsets.only(left: 19, top: 8, right: 19),
               child: Container(
                 decoration: BoxDecoration(border: Border.all(
-                    color: Color.fromARGB(255, 167, 167, 167), width: 1)
+                    color: const Color.fromARGB(255, 167, 167, 167), width: 1),
+                    borderRadius: BorderRadius.circular(4)
                 ),
-                child: Padding(
+                child: const Padding(
                     padding: EdgeInsets.only(left: 10, top: 14, bottom: 14),
                     child: Text("Ivanov Ivan",
                     style: TextStyle(color: Color.fromARGB(255, 167, 167, 167)),)),
               ),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(left: 19, top: 33),
               child: Align(
                 alignment: Alignment.centerLeft,
@@ -67,18 +69,19 @@ class _Sign_upState extends State<Sign_up> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 19, top: 8, right: 19),
+              padding: const EdgeInsets.only(left: 19, top: 8, right: 19),
               child: Container(
                 decoration: BoxDecoration(border: Border.all(
-                    color: Color.fromARGB(255, 167, 167, 167), width: 1)
+                    color: const Color.fromARGB(255, 167, 167, 167), width: 1),
+                    borderRadius: BorderRadius.circular(4)
                 ),
-                child: Padding(
+                child: const Padding(
                     padding: EdgeInsets.only(left: 10, top: 14, bottom: 14),
                     child: Text("+7(999)999-99-99",
                       style: TextStyle(color: Color.fromARGB(255, 167, 167, 167)),)),
               ),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(left: 19, top: 33),
               child: Align(
                 alignment: Alignment.centerLeft,
@@ -87,18 +90,19 @@ class _Sign_upState extends State<Sign_up> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 19, top: 8, right: 19),
+              padding: const EdgeInsets.only(left: 19, top: 8, right: 19),
               child: Container(
                 decoration: BoxDecoration(border: Border.all(
-                    color: Color.fromARGB(255, 167, 167, 167), width: 1)
+                    color: const Color.fromARGB(255, 167, 167, 167), width: 1),
+                    borderRadius: BorderRadius.circular(4)
                 ),
-                child: Padding(
+                child: const Padding(
                     padding: EdgeInsets.only(left: 10, top: 14, bottom: 14),
                     child: Text("**********@gmail.com",
                     style: TextStyle(color: Color.fromARGB(255, 167, 167, 167)),)),
               ),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(left: 19, top: 33),
               child: Align(
                 alignment: Alignment.centerLeft,
@@ -107,18 +111,19 @@ class _Sign_upState extends State<Sign_up> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 19, top: 8, right: 19),
+              padding: const EdgeInsets.only(left: 19, top: 8, right: 19),
               child: Container(
                 decoration: BoxDecoration(border: Border.all(
-                    color: Color.fromARGB(255, 167, 167, 167), width: 1)
+                    color: const Color.fromARGB(255, 167, 167, 167), width: 1),
+                    borderRadius: BorderRadius.circular(4)
                 ),
-                child: Padding(
+                child: const Padding(
                     padding: EdgeInsets.only(left: 10, top: 14, bottom: 14),
                     child: Text("**********",
                       style: TextStyle(color: Color.fromARGB(255, 167, 167, 167)),)),
               ),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(left: 19, top: 33),
               child: Align(
                 alignment: Alignment.centerLeft,
@@ -127,12 +132,13 @@ class _Sign_upState extends State<Sign_up> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 19, top: 8, right: 19),
+              padding: const EdgeInsets.only(left: 19, top: 8, right: 19),
               child: Container(
                 decoration: BoxDecoration(border: Border.all(
-                    color: Color.fromARGB(255, 167, 167, 167), width: 1)
+                    color: const Color.fromARGB(255, 167, 167, 167), width: 1),
+                  borderRadius: BorderRadius.circular(4)
                 ),
-                child: Padding(
+                child: const Padding(
                     padding: EdgeInsets.only(left: 10, top: 14, bottom: 14),
                     child: Text("**********",
                       style: TextStyle(color: Color.fromARGB(255, 167, 167, 167)),)),
@@ -142,15 +148,19 @@ class _Sign_upState extends State<Sign_up> {
             Expanded(
               child: Row(
                 children: [Padding(
-                  padding: EdgeInsets.only(left: 24, right: 14),
+                  padding: const EdgeInsets.only(left: 24, right: 14),
                     child: Checkbox(
+                      side: const BorderSide(
+                        width: 1,
+                        color: Color.fromARGB(255, 167, 167, 167)
+                      ),
                         value: isChecked, onChanged: (bool? value){
                       setState(() {
                         isChecked = value!;
                       });
                     }),
                   ),
-                  RichText(text: TextSpan(
+                  RichText(text: const TextSpan(
                       children: [
                         TextSpan(text: "By ticking this box, you agree to our",
                             style: TextStyle(
@@ -167,15 +177,15 @@ class _Sign_upState extends State<Sign_up> {
             ),
               Expanded(
                 child: Padding(
-                  padding: EdgeInsets.only(top: 8, left: 19, right: 19),
+                  padding: const EdgeInsets.only(top: 8, left: 19, right: 19),
                   child: OutlinedButton(onPressed: (){
                   },
                       style: ButtonStyle(
                           shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(1))),
+                              borderRadius: BorderRadius.circular(4))),
                           backgroundColor: MaterialStateColor.resolveWith((states)
-                          => Color.fromARGB(255, 5, 96, 250))),
-                      child: Text("Sign Up",
+                          => const Color.fromARGB(255, 5, 96, 250))),
+                      child: const Text("Sign Up",
                         style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),
                             fontSize: 16),
                       )
@@ -185,18 +195,16 @@ class _Sign_upState extends State<Sign_up> {
               Align(
                 alignment: Alignment.center,
                 child: Padding(
-                  padding: EdgeInsets.only(top: 20, bottom: 24),
+                  padding: const EdgeInsets.only(top: 20, bottom: 24),
                   child: GestureDetector(
                     onTap: (){
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context){
-                        return Sign_up();
-                      }));
+                        Navigator.of(context).pop();
                     },
-                    child: RichText(text: TextSpan(
+                    child: RichText(text: const TextSpan(
                         children: [
-                          TextSpan(text: "Not have account?",
+                          TextSpan(text: "Already have an account?",
                               style: TextStyle(color: Color.fromARGB(255, 167, 167, 167))),
-                          TextSpan(text: "Sign Up",
+                          TextSpan(text: "Sign In",
                               style: TextStyle(color: Color.fromARGB(255, 5, 96, 250)))
                         ]
                     )
